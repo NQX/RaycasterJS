@@ -5,8 +5,8 @@ function Camera(canvas, resolution, focalLength) {
     this.resolution = resolution;
     this.spacing = this.width / resolution;
     this.focalLength = focalLength || 0.8;
-    this.range = MOBILE ? 8 : 14;
-    this.lightRange = 5;
+    this.range = 140;  //14
+    this.lightRange = 150;  //5
     this.scale = (this.width + this.height) / 1200;
   }
 

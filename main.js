@@ -1,10 +1,11 @@
 
       var CIRCLE = Math.PI * 2;
-      var MOBILE = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+      
 
       var rainON = false;
       var lightningON = false;
       var showEgo = false;
+      //var shiftOn = false;
 
      
 
@@ -15,10 +16,6 @@
         this.height = height;
       }
       
-      
-
-      
-
      
 
       function GameLoop() {
@@ -40,13 +37,13 @@
       };
 
       var display = document.getElementById('display');
-      var player = new Player(15.3, 1.2, Math.PI * 0.3);
+      var player = new Player(2, 2, 0);
       var map = new Map(32);
       var controls = new Controls();
-      var camera = new Camera(display, MOBILE ? 160 : 320, 0.8);
+      var camera = new Camera(display, 320, 0.8);
       var loop = new GameLoop();
 
-      map.randomize();
+      //map.randomize();
       
       loop.start(function frame(seconds) {
         map.update(seconds);
